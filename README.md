@@ -1,97 +1,61 @@
-# 🛒 E-Commerce Data Analysis Project
+# 🛒 E-Commerce Data Analysis (EDA)
 
-## 📌 Overview
-This project performs **data cleaning, preprocessing, and exploratory data analysis (EDA)** on an e-commerce dataset using Python.
+This project performs Exploratory Data Analysis (EDA) on an e-commerce dataset using Python.
 
-The goal is to extract meaningful insights such as:
-- Customer purchasing behavior
-- Monthly and daily sales trends
-- Top customers by orders and spending
-- Country-wise sales performance
-
----
+## 📌 Project Overview
+- Data Cleaning
+- Handling Missing Values
+- Feature Engineering
+- Customer Analysis
+- Sales Analysis
+- Data Visualization
 
 ## 📂 Dataset
 - File: `data.csv`
-- Encoding: `ISO-8859-1`
-- Total records: 541,909 rows
-- Features:
-  - InvoiceNo
-  - StockCode
-  - Description
+- Contains transaction details like:
+  - Invoice Number
+  - Product Description
   - Quantity
-  - InvoiceDate
-  - UnitPrice
-  - CustomerID
+  - Price
+  - Customer ID
   - Country
 
----
-
 ## ⚙️ Technologies Used
-- Python 🐍
+- Python
 - Pandas
 - NumPy
 - Matplotlib
 - Seaborn
 
----
+## 🧹 Data Cleaning Steps
+- Renamed columns
+- Converted `invoice_date` to datetime
+- Handled missing values
+- Removed negative quantities
+- Converted `cust_id` to integer
+- Standardized text data
 
-## 🔧 Data Preprocessing Steps
-- Renamed columns for better readability
-- Converted `invoice_date` to datetime format
-- Converted `cust_id` from float to integer
-- Handled missing values using `dropna()`
-- Removed negative quantity values
-- Converted product descriptions to lowercase
+## 📊 Feature Engineering
+- Created `amount_spent`
+- Extracted:
+  - Year-Month
+  - Month
+  - Day
+  - Hour
 
----
+## 📈 Key Analysis
+- Top customers by orders
+- Top customers by spending
+- Monthly sales trends
+- Daily order distribution
+- Country-wise orders and revenue
 
-## ➕ Feature Engineering
-Created new columns:
-- `amount_spent = quantity × unit_price`
-- `year_month`
-- `month`
-- `day`
-- `hour`
+## 📉 Visualizations
+- Orders per customer
+- Money spent per customer
+- Monthly sales trends
+- Country-wise analysis
 
----
-
-## 📊 Exploratory Data Analysis (EDA)
-
-### 🔹 Customer Analysis
-- Number of orders per customer
-- Top customers by number of orders
-- Top customers by money spent
-
-### 🔹 Time-Based Analysis
-- Monthly order trends
-- Day-wise sales distribution
-- Hourly order patterns
-
-### 🔹 Country Analysis
-- Orders per country
-- Revenue per country
-
----
-
-## 📈 Key Insights
-- Majority of orders come from **United Kingdom**
-- Some customers contribute significantly to total revenue
-- Peak sales observed in specific months (e.g., November)
-- Few products have zero price (free items)
-
----
-
-## 📊 Visualizations
-- Line plots for customer orders
-- Bar charts for monthly sales
-- Boxplots for price distribution
-- Country-wise comparison charts
-
----
-
-## 🚀 How to Run
-
-1. Clone the repository:
+## ▶️ How to Run
 ```bash
-git clone https://github.com/your-username/ecommerce-analysis.git
+pip install -r requirements.txt
